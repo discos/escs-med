@@ -34,6 +34,14 @@ maps the **/** directory of the **escsMaster** node. As a result of this
 operation you can checkout configuration files directly on the escs nodes and
 vice versa.
 
+Documentation on Github
+-----------------------
+
+Documentation of the whole installation configuration in a human readable form is hosted on github 
+under the DISCOS organization page at::
+    
+    http://github.com/discos/escs-med/
+
 ..    Machines
     ========
 

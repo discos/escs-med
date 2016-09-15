@@ -13,6 +13,9 @@ description:
     * :ref:`escsRemote`: the node running VNC servers for accessing the system
     * :ref:`escsConsole`: the node providing access to the system by operators for
       accessing the system, will have **IDL** and **QuickLook** tools installed
+    * :ref:`roachserver`: the node providing services for roach control
+    * :ref:`escsStorage`: the high performance storage attached to the 10GBE network
+
 
 .. toctree::
    escsmaster
@@ -21,5 +24,7 @@ description:
    escsremote
    escscore2
    escsconsole
+   roachserver
+   escsstorage
 
 
