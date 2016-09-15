@@ -12,7 +12,7 @@ The machine main configuration parameters are the following:
 ========= =====
 PARAMETER VALUE
 ========= =====
-hardware  `DELL Poweredge <http://www-03.ibm.com/systems/x/hardware/rack/x3250m4/>`_
+hardware  DELL Poweredge
 CPU       Intel(R) Xeon(R) CPU E3-1220 v3 @ 3.10GHz 
 RAM       4GB
 OS        Ubuntu Server 16.04
@@ -29,10 +29,7 @@ OS installation
 Additional software
 ~~~~~~~~~~~~~~~~~~~
 
+See `med wiki <wiki.med.ira.inaf.it/nfs:ubuntu>`_ for installation of additional software 
+packages necessary for roach boards setup and control.
 
-NTP and firewall
-~~~~~~~~~~~~~~~~
 
-For NTP configuration see :ref:`escsCore1_ntp`.
-
-For firewall configuration see :ref:`escsCore1_firewall`.
