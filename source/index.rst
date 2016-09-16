@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-ESCS 0.3 CONFIGURATION AND SETUP
+ESCS 0.4 CONFIGURATION AND SETUP
 ================================
 Welcome to the documentation of escs setup for Medicina radiotelescope.
 Escs is the *Enhanced single dish control system* which permits the
