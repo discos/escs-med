@@ -12,14 +12,14 @@ The machine main configuration parameters are the following:
 ========= =====
 PARAMETER VALUE
 ========= =====
-hardware  `Supermicro <http://globalsp.ts.fujitsu.com/dmsp/Publications/public/ds-py-rx100-s6-rh.pdf>`_
+hardware  Supermicro with ARECA raid controller
 CPU       Intel(R) Quad Core(TM) i3 CPU 540 @ 3.07GHz
 RAM       4GB
-OS        Scientific Linux 5.3 i386 (32 bit)
-Kernel    2.6.18-128.1.1.el5PAE
-hostname  escsCore1
+OS        Scientific Linux release 6.5 (Carbon) 
+Kernel    2.6.32-431.el6.x86_64 #1 SMP
+hostname  escsStorage
 eth0      192.168.1.9
-eth1      192.168.10.9
+eth1(10G)      192.168.10.9
 raid      192.168.1.8
 ========= =====
 
