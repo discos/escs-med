@@ -38,13 +38,13 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'ESCS 0.3 setup and configuration'
+project = u'ESCS 0.4 setup and configuration'
 copyright = u'2016, Marco Bartolini, Andrea Orlati'
 #
 # The short X.Y version.
-version = 'escs 0.3'
+version = 'escs 0.4'
 # The full version, including alpha/beta/rc tags.
-release = '0.3'
+release = '0.4'
 
 exclude_patterns = []
 
@@ -117,7 +117,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'ESCSconf.tex', u'ESCS 0.3 setup and configuration',
+  ('index', 'ESCSconf.tex', u'ESCS 0.4 setup and configuration',
    u'Marco Bartolini, Andrea Orlati', 'howto'),
 ]
 
