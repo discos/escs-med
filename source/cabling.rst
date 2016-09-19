@@ -2,40 +2,24 @@
 Cabling scheme
 --------------
 
-Network cabling is realized connecting the machines to two different devices:
-subnets 192.168.1.0/24 and 192.168.51.0/24 are configured directly on the HP
-Router in the control room, while public subnet 192.167.189.0/24 is configured
-on the control room HP switch.
+Network cabling is realized connecting the machines to a single switch placed on top of the 
+rack. 
+The switch is a `DELL N1524 <http://www.dell.com/us/business/p/networking-n1500-series/pd>`_ 
+and can be reached on the internal subnet for configuration via HTTP at address
+`192.168.30.199 <http://192.168.30.199>`_ .
 
-+------------+--------+-------------------+------+
-|Machine     | Subnet | Network Apparatus | Port |
-+============+========+===================+======+
-| escsMaster |  .189  | Switch            |  17  |
-|            +--------+-------------------+------+
-|            |  .1    | Router            |  1   |
-|            +--------+-------------------+------+
-|            |  .51   | Router            |  2   |
-+------------+--------+-------------------+------+
-| escsHost   |  .189  | Switch            |  18  |
-|            +--------+-------------------+------+
-|            |  .1    | Router            |  5   |
-|            +--------+-------------------+------+
-|            |  .51   | Router            |  6   |
-+------------+--------+-------------------+------+
-| escs Core1 |  .1    | Router            |  7   |
-|            +--------+-------------------+------+
-|            |  .51   | Router            |  8   |
-+------------+--------+-------------------+------+
-| escsConsole|  .1    | Router            |  3   |
-|            +--------+-------------------+------+
-|            |  .189  | Switch            |  16  |
-+------------+--------+-------------------+------+
+The switch defines four VLANs for traffic separation and services isolation:
 
-A schematic of network services and connections can be seen in the following
-figure:
-
-.. image:: images/machines.png
-   :width: 100%
-
-
-
++-----------+---------------+--------------------+--------------------+
+| VLAN      |   NETWORK     |    USAGE           |     PORTS          |
++===========+===============+====================+====================+
+| 1 default | 192.168.1.0   |  ESCS and service  | 1 2 3 4 5 6 7      | 
+|           | 192.167.189.0 |  network           | 8 9 11 18 20 22 24 |
++-----------+---------------+--------------------+--------------------+
+| 10 data   | 192.168.10.0  |  10Gbe network     | Te1 Te2 Te3 Te4    | 
++-----------+---------------+--------------------+--------------------+
+| 51 antenna| 192.168.51.0  |  Antenna apparatus | 13 15 17 19 21 23  | 
++-----------+---------------+--------------------+--------------------+
+| 52 roach  | 192.168.52.0  |  roach services    | 10 12 14 16        |
+|           |               |  and control       |                    |
++-----------+---------------+--------------------+--------------------+
