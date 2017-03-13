@@ -15,11 +15,12 @@ PARAMETER VALUE
 hardware  DELL Poweredge
 CPU       Intel(R) Xeon(R) CPU E3-1220 v3 @ 3.10GHz 
 RAM       4GB
-OS        Ubuntu Server 16.04
-Kernel    4.4.0-31-generic #50-Ubuntu SMP
+OS        CentOS Linux release 7.3.1611 (Core)
+Kernel    3.10.0-514.10.2.el7.x86_64 #1 SMP
 hostname  roach-server-parabola
-eno1      192.168.1.10
-eno2      192.168.52.10
+em1       192.168.1.10
+em2       192.168.52.10
+p1p1      192.168.10.10 (10Gbe link to storage)
 ========= =====
 
 OS installation
