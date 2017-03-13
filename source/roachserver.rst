@@ -38,11 +38,13 @@ environment, do not proceed with latest versions as you will get all sort of wei
 
 .. code-block:: bash
 
-        $pip freeze
+        # pip freeze
         Automat==0.5.0
         ProxyTypes==0.9
         Twisted==17.1.0
+        ValonSynth==0.0.0
         argparse==1.4.0
+        astropy==1.3
         attrs==16.3.0
         backports-abc==0.5
         backports.ssl-match-hostname==3.5.0.1
@@ -51,6 +53,7 @@ environment, do not proceed with latest versions as you will get all sort of wei
         construct==2.5.5
         corr==0.7.3
         cycler==0.10.0
+        discosbackend==1.2
         functools32==3.2.3-2
         futures==3.0.5
         h5py==2.6.0
@@ -65,6 +68,7 @@ environment, do not proceed with latest versions as you will get all sort of wei
         numpy==1.12.0
         ply==3.10
         pyparsing==2.2.0
+        pyserial==3.3
         python-dateutil==2.6.0
         pytz==2016.10
         singledispatch==3.4.0.3
@@ -76,6 +80,5 @@ environment, do not proceed with latest versions as you will get all sort of wei
         unittest2==1.1.0
         wsgiref==0.1.2
         zope.interface==4.3.3
-
 
 
