@@ -82,3 +82,35 @@ environment, do not proceed with latest versions as you will get all sort of wei
         zope.interface==4.3.3
 
 
+Configuration
+~~~~~~~~~~~~~
+
+All the roach software package can be found in the directory: 
+
+.. code::
+
+   /root/roach_discos_backend
+
+For this to work we had to define symbolic links pointing to the lustre filesystem at root level with different names, namely: 
+
+.. code:: bash
+
+   ln -s /storage /raid
+   ln -s /storage /locallustre
+
+
+Also, the environment variable PFILES has been defined in .bashrc to point to /root/roach_discos_backend/pfiles, for completeness we provide the whole .bashrc file
+
+.. code:: bash
+
+   export WORKON_HOME=~/.envs
+   export PFILES=/root/roach_backend_discos/pfiles
+   source /usr/bin/virtualenvwrapper.sh
+   workon roach
+
+
+
+
+
+
+
