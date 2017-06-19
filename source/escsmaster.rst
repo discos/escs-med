@@ -450,3 +450,37 @@ each night at 03:00am, and is logged in system log */var/log/messages* ::
         logger "no data for backup"
     fi
 
+
+Finalizer
+~~~~~~~~~
+
+Finalizer is a software package that parses scheduled reports as produced by the control system and
+copies data in a schedule by schedule loop into a specified directory for further archival. 
+Finalizer can be downloaded `from discos github organization <https://github.com/discos/finalyzer/>`_ .
+
+At present the software package is installed in the escsmaster machine in the manager user home. 
+This is how the software is configured ::
+
+  [manager@escsmaster] cd /home/manager/software/finalizer
+  escsMaster manager:~/software/finalizer 1012 > ls
+  finalizer.cfg  finalizer.py  LICENSE  readme.md  start_finalizer.sh
+  escsMaster manager:~/software/finalizer 1013 > cat finalizer.cfg 
+  [finalizer]
+
+  job_files_incoming_folder = /archive/report/
+  job_files_done_folder = /archive/report.old/
+  job_files_failed_folder = /archive/report.failed/
+  tar_folder = /locallustre/finalized_data
+
+  job_status_folder = /home/manager/.finalizer/finalizer_status
+  lock_file = /archive/locks/ScheduleRecording.lck
+  pid_file = /home/manager/.finalizer/finalizer.pid
+
+  # 1: critical errors, 2: non-critical errors, 3: debug info
+  log_file = /home/manager/.finalizer/finalizer.log
+  debug_level = 3
+
+
+The finalizer software should be run as a cron job. At the moment it is not run as a recurring job in cron
+as there are still issues with the report creation. 
+
