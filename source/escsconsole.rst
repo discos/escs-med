@@ -49,6 +49,28 @@ versions of the libraries at the following links:
 Remember to add th edirectory to the IDL path and to include all subdirectories
 recursively, the easiest way to do that is via idlde->window->preferences.
 
+update from June 2017
+=====================
+
+In 2017 IDL switched vendor and thus a major update has been performed to the 8.6 version. 
+Unfortunately this version breaks compatibility with OS version in use on escsConsole and 
+cannot be installed on this machine. 
+
+In order to enable a legacy license for the 8.2 version currently in use, IDL now conects to a
+license server centrally managed by INAF. The path to the server is defined in an environment
+variable defined in::
+
+  $ less /etc/basrh
+  ...
+  # LEGACY IDL8.2 LICENSE 
+  export LM_LICENSE_FILE=xxxxx@yyyyyyyy.inaf.it
+
+This enable every user of escsConsole to connect to the license server and have idl 
+correctly working, as identified by the login message of the IDL console:: 
+
+  IDL Version 8.2 (linux x86_64 m64). (c) 2012, Exelis Visual Information Solutions, Inc.
+  Trial version expires on 31-mar-2018.
+  Licensed for use by: INAF - Licenza test server centrale
 
 SDI and Quicklook
 ~~~~~~~~~~~~~~~~~
